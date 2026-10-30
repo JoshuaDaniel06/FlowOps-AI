@@ -1,0 +1,122 @@
+# =========================================================
+# FLOWOPS AI — GITIGNORE CONFIGURATION
+# =========================================================
+
+# --- SECRETS & ENVIRONMENT CONFIGURATIONS ---
+# Never commit live API keys, credentials, or connection strings!
+.env
+.env.*
+*.env
+backend/.env
+backend/.venv/.env
+frontend/.env
+!.env.example
+!backend/.env.example
+
+# --- PYTHON & VIRTUAL ENVIRONMENTS ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+backend/.venv/
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.ruff_cache/
+.mypy_cache/
+
+# --- NODE.JS & FRONTEND ---
+node_modules/
+frontend/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Vite build output
+frontend/dist/
+frontend/dist-ssr/
+dist/
+dist-ssr/
+*.local
+
+# --- APPLICATION RUNTIME DATA & GENERATED ARTIFACTS ---
+# Cached PDF reports, receipts, and temporary downloads
+backend/reports_cache/*
+!backend/reports_cache/.gitkeep
+reports_cache/*
+!reports_cache/.gitkeep
+
+# Temporary scratch inspection scripts
+backend/scratch_*.py
+scratch/
+
+# Local databases & logs
+*.log
+*.sqlite
+*.sqlite3
+*.db
+
+# --- IDE & OS ARTIFACTS ---
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+
+# Editors
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.swp
+*.swo
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
