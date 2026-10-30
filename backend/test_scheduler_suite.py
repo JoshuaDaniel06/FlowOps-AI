@@ -29,7 +29,7 @@ def request(method, path, data=None):
         return e.code, err_json
 
 
-def run_tests():
+def test_scheduler_pipeline_suite():
     print("=" * 60)
     print("FLOWOPS AI SCHEDULED PIPELINES TEST SUITE")
     print("=" * 60)
@@ -112,4 +112,4 @@ def run_tests():
 
 
 if __name__ == "__main__":
-    run_tests()
+    test_scheduler_pipeline_suite()

@@ -7,6 +7,7 @@ safety margin stopping, and pricing resolution WITHOUT making external API calls
 import sys
 from pathlib import Path
 import asyncio
+import pytest
 
 # Ensure backend directory is in python path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -57,6 +58,7 @@ def test_prompt_templates_coverage():
         assert "FlowOps AI" in prompt
 
 
+@pytest.mark.asyncio
 async def test_runner_dry_run_simulation_lifecycle():
     """Test start, execution, live telemetry, and user stop in dry-run simulation mode."""
     runner = RapidTestRunner()
@@ -102,6 +104,7 @@ async def test_runner_dry_run_simulation_lifecycle():
     assert runner.completed_requests == 0
 
 
+@pytest.mark.asyncio
 async def test_spending_ceiling_stop():
     """Verify runner automatically terminates when spending ceiling is reached."""
     runner = RapidTestRunner()

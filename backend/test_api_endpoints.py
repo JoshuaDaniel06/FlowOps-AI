@@ -7,6 +7,7 @@ Zero Claude API credit consumed.
 import sys
 import asyncio
 from pathlib import Path
+import pytest
 
 # Add backend to path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -21,7 +22,8 @@ from main import (
 )
 
 
-async def run_integration_tests():
+@pytest.mark.asyncio
+async def test_rapid_api_endpoints_simulation():
     print("1. Testing GET /api/rapid-test/prompts...")
     prompts = api_rapid_test_prompts()
     assert len(prompts) == 5
@@ -85,4 +87,4 @@ async def run_integration_tests():
 
 
 if __name__ == "__main__":
-    asyncio.run(run_integration_tests())
+    asyncio.run(test_rapid_api_endpoints_simulation())
